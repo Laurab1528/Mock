@@ -1,8 +1,7 @@
+import "../config/db.js";
+import { CarritosModel } from '../modules/carritos.modules.js';
 
-require ("../config/db.js");
-const { CarritosModel } = require( '../modules/carritos.modules.js');
-
-class CarritoDao {
+export class CarritoDao {
 
     ID_FIELD = "_id";
     
@@ -56,7 +55,4 @@ class CarritoDao {
             return false;
         }
     }
-
 }
-
-module.exports = CarritoDao;

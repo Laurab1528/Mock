@@ -1,4 +1,4 @@
-const mongoose = require ("mongoose");
+import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
     title: {
@@ -35,6 +35,5 @@ const Schema = new mongoose.Schema({
         max: 5000
     }
 })
-const ProductosModel = mongoose.model("productos", Schema);
-module.exports = ProductosModel;
 
+export const ProductosModel = mongoose.model("productos", Schema);

@@ -1,6 +1,6 @@
-var { Faker } = require( '@faker-js/faker');
+import { faker } from '@faker-js/faker';
 
-class ProductMocker {
+export class ProductMocker {
 
     constructor(amount) {
         this.amount = amount;
@@ -26,4 +26,3 @@ class ProductMocker {
         return randomProducts;
     }
 }
-module.exports = ProductMocker;

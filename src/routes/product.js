@@ -1,11 +1,9 @@
-const express = require("express");
-const { ProductoDao } = require( "../dao/ProductoDao.js");
-const { authMiddleware } = require ("../middlewares/Auth.js");
-const { ProductMocker } = require('../mocks/productMocker.js');
+import express from "express";
+import { ProductoDao } from "../dao/ProductoDao.js";
+import { authMiddleware } from "../middlewares/Auth.js";
+import { ProductMocker } from '../mocks/productMocker.js'
 const router = express.Router();
 const productoDao = new ProductoDao();
-
-
 
 
 // GET api/productos
@@ -75,4 +73,4 @@ router.delete('/:id', authMiddleware, async (req,res) => {
 
 
 
-modules.exports = router;
+export default router;
